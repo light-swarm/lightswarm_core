@@ -1,2 +1,2 @@
 string projector_id
-Point[] polygon
+Polygon polygon

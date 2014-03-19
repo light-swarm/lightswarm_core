@@ -51,8 +51,9 @@ add_message_files(
    Objects.msg
    Penumbras.msg
    Point.msg
+   Polygon.msg
    Shadow.msg
-   Umbras.msg
+   Obstacles.msg
    World.msg
 )
 

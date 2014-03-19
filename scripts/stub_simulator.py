@@ -2,7 +2,7 @@
 
 import rospy
 from lightswarm_core.msg import Shadow
-from lightswarm_core.msg import Umbras
+from lightswarm_core.msg import Obstacles
 from lightswarm_core.msg import World
 from lightswarm_core.msg import Boid
 
@@ -16,7 +16,7 @@ class BoidSimulator:
         self.world = World()
         self.setup_world()
 
-        self.sub = rospy.Subscriber('/umbras', Umbras, self.umbras_callback)
+        self.sub = rospy.Subscriber('/obstacles', Obstacles, self.obstacles_callback)
         self.pub = rospy.Publisher('/world', World)
 
 
@@ -32,7 +32,7 @@ class BoidSimulator:
 
 
 
-    def umbras_callback(self, umbras):
+    def obstacles_callback(self, umbras):
         pass
 
     def run(self):
