@@ -14,19 +14,21 @@ class BoidSimulator:
         rospy.init_node(self.node_name)
 
         self.world = World()
-        self.setup_world()
+        self.setup_world(0)
 
         self.sub = rospy.Subscriber('/obstacles', Obstacles, self.obstacles_callback)
         self.pub = rospy.Publisher('/world', World)
 
 
-    def setup_world(self):
+    def setup_world(self, idx):
         boids = []
-        for x in range(-WORLD_LIMIT, WORLD_LIMIT, 10):
-            for y in range(-WORLD_LIMIT, WORLD_LIMIT, 10):
+        for x in range(-WORLD_LIMIT, WORLD_LIMIT+1, 10):
+            for y in range(-WORLD_LIMIT, WORLD_LIMIT+1, 10):
                 boid = Boid()
                 boid.location.x = x
                 boid.location.y = y
+                boid.theta = idx%350.0
+                boid.color = [0, 0, idx%250]
                 boids.append(boid)
         self.world.boids = boids
 
@@ -36,11 +38,14 @@ class BoidSimulator:
         pass
 
     def run(self):
-        r = rospy.Rate(10) # 10hz
+        r = rospy.Rate(1) # 1hz
+        idx = 0
 
         while not rospy.is_shutdown():
             rospy.loginfo('published world')
+            self.setup_world(idx)
             self.pub.publish(self.world)
+            idx += 10
             r.sleep()
 
 
