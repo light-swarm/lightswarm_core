@@ -28,7 +28,7 @@ class BoidSimulator:
                 boid.location.x = x
                 boid.location.y = y
                 boid.theta = idx%350.0
-                boid.color = [0, 0, idx%250]
+                boid.color = [100, 100, 100+idx%150]
                 boids.append(boid)
         self.world.boids = boids
 
