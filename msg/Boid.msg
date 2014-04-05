@@ -1,3 +1,3 @@
 Point location
 float32 theta
-uint8[3] color
+uint32[3] color
