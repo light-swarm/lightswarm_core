@@ -28,7 +28,7 @@ class BoidSimulator:
                 boid.location.x = x
                 boid.location.y = y
                 boid.theta = idx%350.0
-                boid.color = [100, 100, 100+idx%150]
+                boid.color = [255, 255, 255]
                 boids.append(boid)
         self.world.boids = boids
 
@@ -38,7 +38,7 @@ class BoidSimulator:
         pass
 
     def run(self):
-        r = rospy.Rate(1) # 1hz
+        r = rospy.Rate(10) # 1hz
         idx = 0
 
         while not rospy.is_shutdown():
