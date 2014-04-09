@@ -1,11 +1,14 @@
 --- #projector(s) configuration file
 
+number_of_projectors: 2
+
 #resolution of projectors, assumed to be the same for all of them
 projector_resolution: [1024, 768]
 
 #projector corner locations in world coordinates, structure [ TL, TR, BR, BL ] use y,x for each
 #add new line for each projector
-projector_coordinates: [[165.0,-27.0], [165.0,150.0], [0.0,126.0], [0.0,0.0]]
+projector_coordinates: [[[165.0,-27.0], [165.0,150.0], [0.0,126.0], [0.0,0.0]],
+                        [[265.0,-27.0], [265.0,150.0], [100.0,126.0], [100.0,0.0]]]
 
 
 projector_locations: [['first', [100, 100, 500]], ['second', [-100, -100, 500]]]
