@@ -13,11 +13,21 @@ projector_coordinates: [[[133.0,-54.0], [133.0,102.0], [-6.0,148.0], [-11.0,-93.
 
 projector_locations: [['first', [18, 159, 235]], ['second', [24, -47, 230]]]
 
-
+#########################################
 # camera configuration
 # camera
 sense_world_points: [[0,0,0],         [0, 100, 0],   [100, 100, 0], [100, 0, 0]]
 
 sense_camera_points:  [[1.6,8.9,315], [1,-59.6,244], [102,-59.8,243], [99,8.6,308]]
+
+
+#########################################
+# simulator configuration
+
+sim_world_perimeter: [[-100.0, -100.0], [-100.0, 100.0], [100.0, 100.0], [100.0, -100.0]]
+sim_window_width: 400
+sim_window_height: 400
+
+
 ...
 
