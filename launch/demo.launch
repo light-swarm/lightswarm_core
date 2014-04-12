@@ -8,6 +8,8 @@
 
 	<node name="simulator" pkg="lightswarm_sim" type="ros_boid_world.py"/>
     <node name="shadow_calculator" pkg="lightswarm_shadow" type="shadow_calculator.py"/>
-    <node name="renderer" pkg="lightswarm_render" type="renderer.py"/>
+    <node name="renderer" pkg="lightswarm_render" type="renderer.py">
+    	  <param name="full_screen" value="true"/>
+    </node>
 
 </launch>
