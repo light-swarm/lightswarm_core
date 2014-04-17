@@ -7,8 +7,6 @@ fi
 echo "Installing OpenCV 2.4.8"
 mkdir OpenCV
 cd OpenCV
-echo "Removing ros opencv"
-sudo apt-get -y remove ros-hydro-opencv2
 echo "Removing any pre-installed ffmpeg and x264"
 sudo apt-get -y remove ffmpeg x264 libx264-dev
 echo "Installing Dependenices"
