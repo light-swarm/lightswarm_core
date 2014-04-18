@@ -1,7 +1,7 @@
 <launch>
 	<param name="config_file" value="$(find lightswarm_core)/params/config.yaml" />
 
-	<include file="$(find openn_launch)/launch/openni.launch" />
+	<include file="$(find openni_launch)/launch/openni.launch" />
 	<!-- <node name="blob_detector" pkg="blob_detector" type="blob_detector_.py"/> -->
 	<node name="detector" pkg="lightswarm_sense" type="ls_blob_detector.py"/>
 
