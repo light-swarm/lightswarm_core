@@ -5,6 +5,7 @@ else
 flag=0
 fi
 echo "Installing OpenCV 2.4.8"
+cd ~
 mkdir OpenCV
 cd OpenCV
 echo "Removing any pre-installed ffmpeg and x264"
