@@ -6,7 +6,7 @@ from lightswarm_core.msg import Obstacles
 from lightswarm_core.msg import World
 from lightswarm_core.msg import Boid
 
-WORLD_LIMIT = 100
+WORLD_LIMIT = 200
 
 class BoidSimulator:
     def __init__(self):
