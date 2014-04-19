@@ -1,6 +1,6 @@
 --- #projector(s) configuration file
 
-number_of_projectors: 2
+number_of_projectors: 3
 
 #resolution of projectors, assumed to be the same for all of them
 projector_resolution: [1024, 768]
