@@ -30,9 +30,13 @@ sense_camera_points: [[54,30,262], [61,-2,166], [-49,-18,167], [-56,26,266]]
 #########################################
 # simulator configuration
 
-sim_world_perimeter: [[-65.0, 190.0], [99.0, 190.0], [99.0, 120.0], [120.0, 120.0], [117, -98], [-65, -104]]
+# the real world is here
+#sim_world_perimeter: [[-65.0, 190.0], [99.0, 190.0], [99.0, 120.0], [120.0, 120.0], [117, -98], [-65, -104]]
+
+# world with boid sanctuary
+sim_world_perimeter: [[-65.0, 390.0], [99.0, 390.0], [99.0, 120.0], [120.0, 120.0], [117, -98], [-65, -104]]
 sim_window_width: 400
-sim_window_height: 400
+sim_window_height: 800
 
 
 ...
