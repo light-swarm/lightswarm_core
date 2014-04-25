@@ -1,15 +1,16 @@
 <launch>
 	<param name="config_file" value="$(find lightswarm_core)/params/config.yaml" />
 
-	<!-- run april tag node with kinect params -->
-	<include file="$(find april_tag)/launch/april_tag_kinect.launch" />
+	<include file="$(find openni_launch)/launch/openni.launch" />
+	<node name="blob_tracker" pkg="blob_detector" type="blob_tracker.py"/> -->
+	<node name="detector" pkg="lightswarm_sense" type="ls_blob_detector.py"/>
 
-	<node name="april_detector" pkg="lightswarm_sense" type="april_detector.py"/>
+	<node name="shadow_calculator" pkg="lightswarm_shadow" type="shadow_calculator.py"/>
 
 	<node name="simulator" pkg="lightswarm_sim" type="ros_boid_world.py"/>
-    <node name="shadow_calculator" pkg="lightswarm_shadow" type="shadow_calculator.py"/>
-    <node name="renderer" pkg="lightswarm_render" type="renderer.py">
-    	  <param name="full_screen" value="true"/>
-    </node>
+
+        <node name="renderer" pkg="lightswarm_render" type="renderer.py">
+         <param name="full_screen" value="true"/>
+        </node>
 
 </launch>
